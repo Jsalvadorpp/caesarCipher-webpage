@@ -9,11 +9,27 @@
 <body>
 
 
-    <h1>Hello, world!</h1>
+    <h1>Caesar Cipher</h1>
+    <form action='/'>
+        
+        <label for='text-input'>Text To Convert: </label><br>
+        <input id='text-input' type='text' name='text' placeholder='text'><br>
 
+        <label for='shift-input'>Shift: </label><br>
+        <input id='shift-input' type='text' name='shift' placeholder='shift'><br><br>
 
+  
+        <input type='submit' value='Convert'></input>
 
+     
+    </form>
 
+    <% if textOutput != '' %>
+        <h3>Text Result: <h3>
+        <p><%= textOutput %></p>
+    <% else %>
+        <p>need text</p>
+    <% end %>
 
 </body>
 </html>
